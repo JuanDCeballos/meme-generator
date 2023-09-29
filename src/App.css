@@ -49,3 +49,44 @@ body {
 .desc {
   font-size: 12px;
 }
+
+.form-container {
+  margin: 36px 36px;
+}
+
+.form-elem {
+  border: none;
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 230px;
+  height: 35px;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.input:focus-visible {
+  border: 2px solid #d5d4d8;
+}
+
+.btn {
+  width: 477px;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #711f8d, #a818da);
+  color: #ffffff;
+  font-weight: 600;
+}
