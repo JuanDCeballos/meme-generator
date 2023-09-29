@@ -1,10 +1,11 @@
+import Header from './components/Header';
 import './App.css';
 
 const App = () => {
   return (
-    <>
-      <h1>Hellow world</h1>
-    </>
+    <div className='container'>
+      <Header />
+    </div>
   );
 };
 
