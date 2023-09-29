@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 550px;
+  height: 550px;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  background: linear-gradient(to right, #711f8d, #a818da);
+  height: 65px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-title-img {
+  width: 60px;
+  height: 45px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.desc {
+  font-size: 12px;
 }
