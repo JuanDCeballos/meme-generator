@@ -14,18 +14,42 @@ const Meme = () => {
     const memesArray = allMemeImages.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[randomNumber].url;
-    setMeme((prevState) => ({
-      ...prevState,
+    setMeme((prevMeme) => ({
+      ...prevMeme,
       randomImage: url,
     }));
   }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  };
+
+  console.log(meme);
 
   return (
     <div className='form-container'>
       <form className='form'>
         <div className='inputs-container'>
-          <input className='form-elem input' type='text' />
-          <input className='form-elem  input' type='text' />
+          <input
+            className='form-elem input'
+            type='text'
+            placeholder='Top text'
+            name='topText'
+            value={meme.topText}
+            onChange={handleChange}
+          />
+          <input
+            className='form-elem  input'
+            type='text'
+            placeholder='Bottom text'
+            name='bottomText'
+            value={meme.bottomText}
+            onChange={handleChange}
+          />
         </div>
         <input
           className='form-elem  btn'
@@ -35,7 +59,9 @@ const Meme = () => {
         />
       </form>
       <div className='image-container'>
-        <img className='form-image' src={meme.randomImage} />
+        <img src={meme.randomImage} className='form-image' />
+        <h2 className='meme--text top'>{meme.topText}</h2>
+        <h2 className='meme--text bottom'>{meme.bottomText}</h2>
       </div>
     </div>
   );
